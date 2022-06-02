@@ -1,0 +1,485 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
+body {
+    Font-size: 0.8rem;
+    background: left 50% top 3rem/170px no-repeat url(images/pattern-circles.svg), left 0rem top 0rem/1300px no-repeat url(images/bg-pattern.svg), hsl(230, 100%, 99%);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1.5rem 0 1.5rem;
+    position: relative;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    margin: 5rem 0 5rem 0;
+}
+
+h1 {
+    color: hsl(227, 35%, 25%);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-weight: 600;
+    color: rgba(41, 51, 86, 0.8);
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+}
+
+.pricing_component {
+    color: rgba(41, 51, 86, 0.8);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    box-shadow: 0px 0px 28px 1px rgba(228, 227, 227, 0.9);
+    margin-bottom: 2rem;
+}
+
+.pricing_component .hero_section {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 0.7rem 0.7rem 0 0;
+    padding: 2.3rem 1.3rem 1.5rem 1.3rem;
+}
+
+.hero_section .desktop {
+    display: none;
+}
+
+.hero_section .num_views {
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-bottom: 2.5rem;
+    font-weight: 800;
+}
+
+.hero_section h3 {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 2.5rem;
+}
+
+.hero_section #slider {
+    width: 100%;
+    height: 0.6rem;
+    margin-bottom: 2.5rem;
+    -webkit-appearance: none;
+    background: linear-gradient(90deg, rgb(234, 238, 251) 50%, rgb(234, 238, 251) 50%);
+    border-radius: 3rem;
+    outline: none;
+    cursor: pointer;
+
+}
+
+#slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: center/60% no-repeat url(images/icon-slider.svg) #10d5c2;
+    box-shadow: 0px 15px 40px -2px hsl(174, 86%, 45%);
+}
+
+#slider::-webkit-slider-thumb:active {
+    transform: scale(1.1);
+}
+
+#slider::-webkit-slider-thumb:hover {
+    transform: scale(1.1);
+}
+
+#slider::-moz-range-thumb {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: center/60% no-repeat url(images/icon-slider.svg) hsl(174, 86%, 45%);
+    box-shadow: 0px 15px 40px -2px hsl(174, 86%, 45%);
+}
+
+.hero_section .price_section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.price_section .price {
+    font-size: 2.1rem;
+    font-weight: 800;
+    margin-right: 0.5rem;
+}
+
+.price_section .monthly {
+    font-size: 0.9rem;
+}
+
+.hero_section .how_often_section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+
+.how_often_section .switch_section {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.switch_section label:first-child {
+    margin-right: 0.8rem;
+}
+
+.how_often_section .switch {
+    position: relative;
+    display: inline-block;
+    width: 47px;
+    height: 22px;
+    margin-right: 0.3rem;
+}
+
+.switch input {
+    display: none;
+}
+
+.switch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: hsl(223, 50%, 87%);
+    transition: 0.4s;
+    border-radius: 2rem;
+}
+
+.switch .slider:before {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 14px;
+    left: 4px;
+    bottom: 4px;
+    background-color: hsl(0, 0%, 100%);
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.switch input:checked+.slider {
+    background-color: hsl(174, 76%, 80%);
+}
+
+.switch input:checked+.slider:before {
+    transform: translateX(25px);
+}
+
+.how_often_section .discount {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.discount span {
+    margin-right: 0.3rem;
+}
+
+.discount .discount_num_mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: hsl(15, 100%, 70%);
+    background-color: hsl(14, 92%, 95%);
+    padding: 0.12rem 0.5rem 0.2rem 0.5rem;
+    border-radius: 1rem;
+}
+
+.discount .discount_num_desktop {
+    display: none;
+}
+
+.pricing_component .benefits {
+    width: 100%;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 0 0 0.7rem 0.7rem;
+    margin-top: 0.2rem;
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+}
+
+.pricing_component .benefits ul {
+    list-style-type: none;
+}
+
+.benefits ul li {
+    margin-bottom: 0.9rem;
+}
+
+li img {
+    margin-right: 1rem;
+}
+
+.benefits .start_btn {
+    letter-spacing: 0.03rem;
+    color: hsl(223, 50%, 87%);
+    background-color: hsl(227, 35%, 25%);
+    border: none;
+    border-radius: 3rem;
+    padding: 0.8rem 3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.benefits .start_btn:hover {
+    transform: scale(1.03);
+    color: hsl(0, 0%, 100%);
+}
+
+.benefits .start_btn:active {
+    transform: scale(1.03);
+}
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+.attribution {
+    margin-bottom: 0.5rem;
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media(min-width :250px)and (max-width:370px) {
+    body {
+        font-size: 0.7rem;
+    }
+
+    header {
+        margin: 5rem 0 3rem 0;
+    }
+
+    h1 {
+        font-size: 1.1rem;
+    }
+
+    h2 {
+        font-size: 0.8rem;
+    }
+
+    .pricing_component .hero_section {
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 0.7rem 0.7rem 0 0;
+        padding: 2.3rem 0.8rem 1.5rem 0.8rem;
+
+    }
+
+    .hero_section .desktop {
+        /* display: none; */
+        visibility: hidden;
+    }
+
+    .hero_section .mobile {
+        display: block;
+    }
+
+    .hero_section .price_section {
+        margin-bottom: 1.5rem;
+    }
+
+    .price_section .price {
+        font-size: 1.8rem;
+    }
+
+    .price_section .monthly {
+        font-size: 0.8rem;
+    }
+
+    .hero_section .how_often_section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0rem;
+    }
+
+    .how_often_section .switch_section {
+        margin-bottom: 1.5rem;
+    }
+
+    .switch_section label:first-child {
+        font-size: 0.7rem;
+        margin-right: 0.8rem;
+    }
+
+    .how_often_section .discount {
+        font-size: 0.7rem;
+    }
+
+    .discount span {
+        margin-right: 0.8rem;
+    }
+
+    .benefits .start_btn {
+        font-size: 0.8rem;
+        letter-spacing: 0.03rem;
+        color: hsl(223, 50%, 87%);
+        background-color: hsl(227, 35%, 25%);
+        border: none;
+        border-radius: 3rem;
+        padding: 0.8rem 2.7rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        cursor: pointer;
+    }
+
+    .attribution {
+        font-size: 0.6rem;
+    }
+}
+
+
+@media (min-width:600px) {
+    body {
+        font-size: 0.9rem;
+        background: left 50% top 3rem/170px no-repeat url(images/pattern-circles.svg), left 0rem top -15rem/2300px no-repeat url(images/bg-pattern.svg), hsl(230, 100%, 99%);
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    h2 br {
+        display: none;
+    }
+
+    .pricing_component {
+        max-width: 600px;
+        margin-top: 2rem;
+    }
+
+    .pricing_component .hero_section {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3rem 3rem 1.5rem 3rem;
+    }
+
+    .hero_section .views_sec {
+        order: 1;
+        font-size: 1rem;
+    }
+
+    .hero_section h3 {
+        font-size: 1rem;
+
+    }
+
+    .hero_section #slider {
+        order: 3;
+        margin-bottom: 4rem;
+        margin-top: 1rem;
+    }
+
+    .hero_section .price_section {
+        order: 2;
+
+    }
+
+    .price_section .price {
+        font-size: 2.8rem;
+
+    }
+
+    .price_section .monthly {
+        font-size: 1rem;
+    }
+
+    .hero_section .how_often_section {
+        order: 4;
+        width: 100%;
+        justify-content: right;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    .how_often_section .switch_section {
+        margin-right: 1rem;
+    }
+
+    .switch_section label:first-child {
+        font-size: 0.9rem;
+    }
+
+    .discount span {
+        margin-right: 0.5rem;
+        content: "-25 % discount0;"
+    }
+
+    .discount .discount_num_mobile {
+        display: none;
+    }
+
+    .discount .discount_num_desktop {
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8rem;
+        font-weight: 800;
+        color: hsl(15, 100%, 70%);
+        background-color: hsl(14, 92%, 95%);
+        padding: 0.12rem 0.5rem 0.2rem 0.5rem;
+        border-radius: 1rem;
+        margin-right: 1rem;
+    }
+
+    .pricing_component .benefits {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3rem 3rem 1.5rem 3rem;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .benefits .start_btn {
+        padding: 1rem 4rem 1rem 4rem;
+    }
+
+}

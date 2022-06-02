@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Interactive pricing component</title>
+</head>
+
+<body>
+  <header>
+    <h1>Simple, traffic-based pricing</h1>
+    <h2>Sign-up for our 30-day trial.<br>No credit card required.</h2>
+  </header>
+
+  <main class="pricing_component">
+    <section class="hero_section">
+      <div class="views_sec">
+        <div class="num_views"></div>
+        <h3>Pageviews</h3>
+      </div>
+
+      <input type="range" id="slider" value="2" min="0" max="4" step="1">
+      <div class="price_section">
+        <div class="price"></div>
+        <span class="monthly">/ month</span>
+      </div>
+
+      <div class="how_often_section">
+        <div class="switch_section">
+          <label for="checkbox">Monthly Billing</label>
+          <label class="switch">
+            <input type="checkbox" id="checkbox">
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="discount">
+          <span>Yearly Billing</span>
+          <div class="discount_num_mobile">-25%</div>
+          <div class="discount_num_desktop">-25% discount</div>
+        </div>
+      </div>
+
+    </section>
+    <section class="benefits">
+      <ul>
+        <li> <img src="images/icon-check.svg" alt="icon check">Unlimited websites</li>
+        <li> <img src="images/icon-check.svg" alt="icon check">100% data ownership</li>
+        <li> <img src="images/icon-check.svg" alt="icon check">Email reports</li>
+      </ul>
+      <button class="start_btn"> Start my trial</button>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/Luka85">Luka Kikelj</a>.
+    </div>
+
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
